@@ -321,3 +321,11 @@ The project is under active development. Features and technologies described abo
 Build a learning platform that does more than provide answers: one that uses evidence from a student's learning history to identify knowledge gaps, recommend meaningful practice, provide course-grounded assistance, and track how understanding develops over time.
 
 **The LLM helps explain. The learner model and recommendation engine help decide what comes next.**
+
+## Run the current local version on Windows
+
+1. Make sure `uv` is installed and the project dependencies have been synced with `uv sync`.
+2. Double-click [`run-local.cmd`](run-local.cmd) in this folder.
+3. The launcher starts the API and the built website, then opens `http://127.0.0.1:5173/` in your browser. Keep the two terminal windows open while using the site; close them to stop it.
+
+The frontend source files are not currently present in this folder, so the launcher serves the existing build in `frontend/dist`. AI features also need a `GROQ_API_KEY` in a root-level `.env` file. Without the key, the site can still open, but AI requests return an explanatory error.
